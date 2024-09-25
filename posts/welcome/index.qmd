@@ -1,12 +1,89 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
+title: "Breaking barriers: The evolution of female participation in the Olympics"
+author: "Bilguun Boldbaatar"
+date: "2024-10-04"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+```{r setup}
+#| include: false
 
-![](thumbnail.jpg)
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  eval = TRUE, 
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE
+)
 
+library(tidyverse)
 
+olympics <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
+```
+
+## Setting the stage
+
+The Summer Olympic Games, a global celebration of athletic prowess, have long captivated audiences around the world. However, for much of its history, this grand event was an arena reserved almost exclusively for men. When the first modern Olympics took place in 1896, women were conspicuously absent, sidelined by societal norms that relegated them to the spectator stands. It wasn’t until 1900, in Paris, that women were allowed to compete, and even then, their participation was severely restricted—just **22** women out of nearly 1,000 athletes.
+
+But the story of women in the Olympics is one of perseverance and progress. Over the course of a century, these pioneering female athletes not only fought for a place on the Olympic stage but also paved the way for future generations, challenging gender stereotypes and breaking through the barriers that once held them back.
+
+## The data behind the progress
+
+The journey from exclusion to near-equality in the Olympic Games is a testament to the resilience of female athletes and the slow but steady march of societal change. This narrative is vividly illustrated through data spanning more than a century, from the first inclusion of women in 1900 to their near-parity in 2016.
+
+The data, sourced from the [TidyTuesday GitHub repository](https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-08-06/readme.md), captures the stories of thousands of athletes who competed in the Summer Olympics. The dataset had already been scraped and cleaned by the TidyTuesday community, ensuring it was ready for analysis. Consequently, minimal data cleaning was required—mostly involving filtering the data to focus on female athletes in the Summer Olympics and removing entries unrelated to the analysis. By analyzing variables such as the year of competition, gender, the sports they competed in, and their medal outcomes, we can trace the evolution of female participation and understand how far the Games have come.
+
+## Analyzing the journey
+
+The rise of female athletes in the Summer Olympics is nothing short of remarkable. In the early 20th century, the idea of women competing in the same events as men was met with skepticism and resistance. Yet, year by year, women carved out a space for themselves in the Olympic arena, defying expectations and expanding the range of sports they could compete in.
+
+@fig-sports-growth below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.
+
+```{r}
+#| label: fig-sports-growth
+#| fig-cap: "Growth in the percentage of female athletes participating in the Summer Olympics from 1900 to 2016."
+#| fig-height: 4
+#| fig-width: 6
+
+female_participation <- olympics %>%
+  filter(sex == "F", season == "Summer") %>%
+  group_by(year) %>%
+  summarise(female_athletes = n_distinct(id)) 
+
+total_athletes <- olympics %>%
+  filter(sex %in% c("M", "F"), season == "Summer") %>%
+  group_by(year) %>%
+  summarise(total_athletes = n_distinct(id))
+
+participation_data <- left_join(female_participation, total_athletes, by = "year")
+
+participation_data <- participation_data %>%
+  mutate(percentage_female = (female_athletes / total_athletes) * 100,
+         percentage_female = if_else(year == 1900, 2.2, percentage_female))
+
+participation_data %>% 
+  ggplot(aes(x = year, y = percentage_female)) +
+  geom_line(color = "blue") +
+  geom_point() +
+  scale_x_continuous(breaks = c(seq(1900, 2012, by = 8), 2016)) +
+  labs(title = "Percentage of female athletes in Summer Olympics (1900-2016)",
+       x = "Year",
+       y = "Percentage of female athletes") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 12, hjust = 0.5)) +
+  geom_text(data = participation_data %>% filter(year == min(year)),
+            aes(label = paste0(round(percentage_female, 1), "%")),
+            vjust = -1, hjust = -0.1, size = 3) +
+  geom_text(data = participation_data %>% filter(year == max(year)),
+            aes(label = paste0(round(percentage_female, 1), "%")),
+            vjust = 2, hjust = 0.5, size = 3) +
+  annotate("text", x = 1928, y = 5, label = "1928: Women's athletics introduced", size = 3, hjust = -0.05, vjust = 1) +
+  annotate("text", x = 1976, y = 20, label = "1976: Women's basketball introduced", size = 3, hjust = -0.05, vjust = 8) +
+  geom_vline(xintercept = 1928, linetype = "dashed", color = "red", size = 0.5) +
+  geom_vline(xintercept = 1976, linetype = "dashed", color = "red", size = 0.5) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.title.x = element_text(size = 10),
+    axis.title.y = element_text(size = 10)
+  )
+```
