@@ -1,13 +1,46 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Bilguun Boldbaatar"
+image: profile_pic.jpg
 about:
-  template: jolla
+  id: hero-heading
+  image-shape: round
+  template: trestles
   links:
     - icon: github
       text: Github
       href: https://github.com/etc5523-2022
+    - icon: linkedin
+      text: Linkedin
+      href: https://linkedin.com/in/bilguun-boldbaatar-b624a1214
 
 ---
+::: {#hero-heading}
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+## Data Enthusiast & Aspiring Data Analyst
+
+Welcome to my personal website where I share my journey in data analysis, finance, and more.
+
+### Education
+
+- **Master's in Business Analytics**    
+  Monash university, Australia    
+  2024 - Present
+
+- **Bachelor's in Finance**  
+  University of Finance and Economics, Mongolia  
+  2017 - 2021
+
+### Work Experience
+
+- **Financial Analyst**  
+  ANUN LLC, Mongolia  
+  2021 - 2024
+
+:::
+
+Hello! I'm Bilguun Boldbaatar, a data enthusiast with a background in finance. I am currently pursuing further studies in business analytics at Monash University. My passion lies in using data to inform decision-making processes, particularly in the context of developing solutions for real-world problems.
+
+I have a strong foundation in financial analysis, which I developed during my time at ANUN LLC in Mongolia. Now, I am eager to apply my skills in data analysis to make a meaningful impact in the field.
+
+Feel free to connect with me on GitHub to see more of my work!
+
