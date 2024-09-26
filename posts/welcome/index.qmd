@@ -37,13 +37,13 @@ The data, sourced from the [TidyTuesday GitHub repository](https://github.com/rf
 
 The rise of female athletes in the Summer Olympics is nothing short of remarkable. In the early 20th century, the idea of women competing in the same events as men was met with skepticism and resistance. Yet, year by year, women carved out a space for themselves in the Olympic arena, defying expectations and expanding the range of sports they could compete in.
 
-@fig-sports-growth below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.
+@fig-lineplot below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.
 
 ```{r}
-#| label: fig-sports-growth
+#| label: fig-lineplot
 #| fig-cap: "Growth in the percentage of female athletes participating in the Summer Olympics from 1900 to 2016."
-#| fig-height: 4
-#| fig-width: 6
+#| fig-height: 5
+#| fig-width: 7
 
 female_participation <- olympics %>%
   filter(sex == "F", season == "Summer") %>%
@@ -87,3 +87,49 @@ participation_data %>%
     axis.title.y = element_text(size = 10)
   )
 ```
+
+As the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States. Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.
+
+@fig-sports-growth further illustrates this shift, highlighting the growth in the number of sports available to women over the years. What began as a handful of "suitable" sports gradually expanded into a diverse array of events, including those traditionally dominated by men, such as boxing and wrestling. This wasn’t just about adding more sports. It was about challenging deep-rooted perceptions of what women could achieve.
+
+```{r}
+#| label: fig-sports-growth
+#| fig-cap: "The growth of women’s sports compared to total sports in the Summer Olympics (1900-2016)."
+#| fig-width: 8
+#| fig-height: 5
+
+sports_data <- olympics %>%
+  filter(season == "Summer") %>%
+  group_by(year) %>%
+  summarise(womens_sports = n_distinct(sport[sex == "F"]),
+            total_sports = n_distinct(sport))  
+
+# Plotting the growth of women's sports and total sports
+ggplot(sports_data, aes(x = year)) +
+  geom_line(aes(y = womens_sports, color = "Women’s sports"), size = 0.5) +
+  geom_line(aes(y = total_sports, color = "Total sports"), size = 0.5) +
+  geom_point(aes(y = womens_sports, color = "Women’s sports")) +
+  geom_point(aes(y = total_sports, color = "Total sports")) +
+  labs(title = "Growth in number of women’s sports (1900-2016)",
+       x = "Year",
+       y = "Number of sports",
+       color = "") +
+  theme_classic() +
+  geom_text(data = sports_data %>% filter(year == min(year)),
+            aes(label = womens_sports, y = womens_sports), vjust = -1, hjust = 1, size = 3.5) +
+  geom_text(data = sports_data %>% filter(year == max(year)),
+            aes(label = womens_sports, y = womens_sports), vjust = -1, hjust = 0.5, size = 3.5) +
+  geom_text(data = sports_data %>% filter(year == min(year)),
+            aes(label = total_sports, y = total_sports), vjust = -1, hjust = 1, size = 3.5) +
+  geom_text(data = sports_data %>% filter(year == max(year)),
+            aes(label = total_sports, y = total_sports), vjust = -1, hjust = 0.5, size = 3.5) +
+  scale_x_continuous(breaks = c(seq(1896, 2016, by = 8)))
+```
+
+## Looking ahead
+
+The transformation of female participation in the Summer Olympics from 1900 to 2016 is a powerful narrative of progress, but it also serves as a reminder of the work that remains. While women now compete in nearly all Olympic sports, the fight for true equality, both in terms of opportunities and recognition, is ongoing.
+
+As we look to future Olympic Games, it’s essential to continue advocating for policies that support female athletes and to celebrate their achievements on equal footing with their male counterparts. The Olympic Games, after all, are more than just a series of competitions. They are a reflection of our global society and its values. The strides made in gender equality within the Games mirror broader social progress, yet they also highlight the areas where we still fall short.
+
+The story of women in the Olympics is not just one of athletic achievement. It is a story of resilience, determination, and the ongoing pursuit of equality. It’s a story that continues to unfold, with each Olympic Games offering a new chapter in the long journey toward true gender parity.
