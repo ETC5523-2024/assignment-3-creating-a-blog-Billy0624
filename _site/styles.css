@@ -1,11 +1,11 @@
 /* css styles */
 .navbar-dark, .quarto-title-banner {
-  background-color: #CCE6FF;
+  background-color: orange;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #000000;
-    font-family: Aptos, sans-serif;
+    color: #027EB6;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 h1 {
@@ -17,20 +17,20 @@ h2 {
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Karla", sans-serif;
     font-size: 18px;
     letter-spacing: 0px;
     word-spacing: 2px;
     color: #000000;
     font-weight: 500;
     text-decoration: none solid rgb(68, 68, 68);
-    font-style: italic;
+    font-style: normal;
     font-variant: normal;
     text-transform: none;
 }
 
 .navbar-title {
-    font-family: Aptos, sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     font-weight: 600;
     font-style: normal;
 }
