@@ -2,7 +2,8 @@
 title: "Breaking barriers: The evolution of female participation in the Olympics"
 author: "Bilguun Boldbaatar"
 date: "2024-10-04"
-categories: [news]
+bibliography: references.bib
+categories: [sports]
 ---
 
 ```{r setup}
@@ -37,7 +38,7 @@ The data, sourced from the [TidyTuesday GitHub repository](https://github.com/rf
 
 The rise of female athletes in the Summer Olympics is nothing short of remarkable. In the early 20th century, the idea of women competing in the same events as men was met with skepticism and resistance. Yet, year by year, women carved out a space for themselves in the Olympic arena, defying expectations and expanding the range of sports they could compete in.
 
-@fig-lineplot below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.
+@fig-lineplot below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976 @wikipedia. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.
 
 ```{r}
 #| label: fig-lineplot
@@ -88,7 +89,7 @@ participation_data %>%
   )
 ```
 
-As the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States. Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.
+As the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States [@title_ix]. Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.
 
 @fig-sports-growth further illustrates this shift, highlighting the growth in the number of sports available to women over the years. What began as a handful of "suitable" sports gradually expanded into a diverse array of events, including those traditionally dominated by men, such as boxing and wrestling. This wasn’t just about adding more sports. It was about challenging deep-rooted perceptions of what women could achieve.
 

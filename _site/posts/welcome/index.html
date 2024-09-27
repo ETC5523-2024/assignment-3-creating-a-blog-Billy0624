@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">Breaking barriers: The evolution of female participation in the Olympics</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">sports</div>
               </div>
                   </div>
   </div>
@@ -162,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="analyzing-the-journey" class="level2">
 <h2 class="anchored" data-anchor-id="analyzing-the-journey">Analyzing the journey</h2>
 <p>The rise of female athletes in the Summer Olympics is nothing short of remarkable. In the early 20th century, the idea of women competing in the same events as men was met with skepticism and resistance. Yet, year by year, women carved out a space for themselves in the Olympic arena, defying expectations and expanding the range of sports they could compete in.</p>
-<p><a href="#fig-lineplot" class="quarto-xref">Figure&nbsp;1</a> below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.</p>
+<p><a href="#fig-lineplot" class="quarto-xref">Figure&nbsp;1</a> below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976 <span class="citation" data-cites="wikipedia">Wikipedia contributors (<a href="#ref-wikipedia" role="doc-biblioref">2024</a>)</span>. These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-lineplot" class="quarto-figure quarto-figure-center quarto-float anchored">
@@ -177,7 +197,7 @@ Figure&nbsp;1: Growth in the percentage of female athletes participating in the 
 </div>
 </div>
 </div>
-<p>As the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States. Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.</p>
+<p>As the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States <span class="citation" data-cites="title_ix">(<a href="#ref-title_ix" role="doc-biblioref"><span>“Title <span>IX</span> and <span>Sex</span> <span>Discrimination</span>”</span> 1972</a>)</span>. Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.</p>
 <p><a href="#fig-sports-growth" class="quarto-xref">Figure&nbsp;2</a> further illustrates this shift, highlighting the growth in the number of sports available to women over the years. What began as a handful of “suitable” sports gradually expanded into a diverse array of events, including those traditionally dominated by men, such as boxing and wrestling. This wasn’t just about adding more sports. It was about challenging deep-rooted perceptions of what women could achieve.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -201,9 +221,17 @@ Figure&nbsp;2: The growth of women’s sports compared to total sports in the Su
 <p>The story of women in the Olympics is not just one of athletic achievement. It is a story of resilience, determination, and the ongoing pursuit of equality. It’s a story that continues to unfold, with each Olympic Games offering a new chapter in the long journey toward true gender parity.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-title_ix" class="csl-entry" role="listitem">
+<span>“Title <span>IX</span> and <span>Sex</span> <span>Discrimination</span>.”</span> 1972. Policy {Guidance}. <a href="https://www2.ed.gov/about/offices/list/ocr/docs/tix_dis.html">https://www2.ed.gov/about/offices/list/ocr/docs/tix_dis.html</a>.
+</div>
+<div id="ref-wikipedia" class="csl-entry" role="listitem">
+Wikipedia contributors. 2024. <span>“Participation of Women in the Olympics.”</span> <a href="https://en.wikipedia.org/w/index.php?title=Participation_of_women_in_the_Olympics&amp;oldid=1246485146" class="uri">https://en.wikipedia.org/w/index.php?title=Participation_of_women_in_the_Olympics&amp;oldid=1246485146</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
