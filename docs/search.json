@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Bilguun Boldbaatar",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n\n  \n  \n\n\nWelcome to my personal website where I share my journey in data analysis, finance, and more.\n\n\n\nMaster’s in Business Analytics\nMonash university, Australia\n2024 - Present\nBachelor’s in Finance\nUniversity of Finance and Economics, Mongolia\n2017 - 2021\n\n\n\n\n\nFinancial Analyst\nANUN LLC, Mongolia\n2021 - 2024\nHello! I’m Bilguun Boldbaatar, a data enthusiast with a background in finance. I am currently pursuing further studies in business analytics at Monash University. My passion lies in using data to inform decision-making processes, particularly in the context of developing solutions for real-world problems.\nI have a strong foundation in financial analysis, which I developed during my time at ANUN LLC in Mongolia. Now, I am eager to apply my skills in data analysis to make a meaningful impact in the field.\nFeel free to connect with me on GitHub to see more of my work!"
+  },
+  {
+    "objectID": "about.html#data-enthusiast-aspiring-data-analyst",
+    "href": "about.html#data-enthusiast-aspiring-data-analyst",
+    "title": "Bilguun Boldbaatar",
+    "section": "",
+    "text": "Welcome to my personal website where I share my journey in data analysis, finance, and more.\n\n\n\nMaster’s in Business Analytics\nMonash university, Australia\n2024 - Present\nBachelor’s in Finance\nUniversity of Finance and Economics, Mongolia\n2017 - 2021\n\n\n\n\n\nFinancial Analyst\nANUN LLC, Mongolia\n2021 - 2024"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Breaking barriers: The evolution of female participation in the Olympics",
+    "section": "",
+    "text": "The Summer Olympic Games, a global celebration of athletic prowess, have long captivated audiences around the world. However, for much of its history, this grand event was an arena reserved almost exclusively for men. When the first modern Olympics took place in 1896, women were conspicuously absent, sidelined by societal norms that relegated them to the spectator stands. It wasn’t until 1900, in Paris, that women were allowed to compete, and even then, their participation was severely restricted—just 22 women out of nearly 1,000 athletes.\nBut the story of women in the Olympics is one of perseverance and progress. Over the course of a century, these pioneering female athletes not only fought for a place on the Olympic stage but also paved the way for future generations, challenging gender stereotypes and breaking through the barriers that once held them back."
+  },
+  {
+    "objectID": "posts/welcome/index.html#setting-the-stage",
+    "href": "posts/welcome/index.html#setting-the-stage",
+    "title": "Breaking barriers: The evolution of female participation in the Olympics",
+    "section": "",
+    "text": "The Summer Olympic Games, a global celebration of athletic prowess, have long captivated audiences around the world. However, for much of its history, this grand event was an arena reserved almost exclusively for men. When the first modern Olympics took place in 1896, women were conspicuously absent, sidelined by societal norms that relegated them to the spectator stands. It wasn’t until 1900, in Paris, that women were allowed to compete, and even then, their participation was severely restricted—just 22 women out of nearly 1,000 athletes.\nBut the story of women in the Olympics is one of perseverance and progress. Over the course of a century, these pioneering female athletes not only fought for a place on the Olympic stage but also paved the way for future generations, challenging gender stereotypes and breaking through the barriers that once held them back."
+  },
+  {
+    "objectID": "posts/welcome/index.html#the-data-behind-the-progress",
+    "href": "posts/welcome/index.html#the-data-behind-the-progress",
+    "title": "Breaking barriers: The evolution of female participation in the Olympics",
+    "section": "The data behind the progress",
+    "text": "The data behind the progress\nThe journey from exclusion to near-equality in the Olympic Games is a testament to the resilience of female athletes and the slow but steady march of societal change. This narrative is vividly illustrated through data spanning more than a century, from the first inclusion of women in 1900 to their near-parity in 2016.\nThe data, sourced from the TidyTuesday GitHub repository, captures the stories of thousands of athletes who competed in the Summer Olympics. The dataset had already been scraped and cleaned by the TidyTuesday community, ensuring it was ready for analysis. Consequently, minimal data cleaning was required—mostly involving filtering the data to focus on female athletes in the Summer Olympics and removing entries unrelated to the analysis. By analyzing variables such as the year of competition, gender, the sports they competed in, and their medal outcomes, we can trace the evolution of female participation and understand how far the Games have come."
+  },
+  {
+    "objectID": "posts/welcome/index.html#analyzing-the-journey",
+    "href": "posts/welcome/index.html#analyzing-the-journey",
+    "title": "Breaking barriers: The evolution of female participation in the Olympics",
+    "section": "Analyzing the journey",
+    "text": "Analyzing the journey\nThe rise of female athletes in the Summer Olympics is nothing short of remarkable. In the early 20th century, the idea of women competing in the same events as men was met with skepticism and resistance. Yet, year by year, women carved out a space for themselves in the Olympic arena, defying expectations and expanding the range of sports they could compete in.\nFigure 1 below captures the steady rise of female athletes in the Summer Olympics, from a modest 2.2% in 1900 to nearly 45% by 2016. Notable milestones in this journey are highlighted, such as the introduction of women’s athletics in 1928 and the inclusion of women’s basketball in 1976 Wikipedia contributors (2024). These events marked significant shifts in the opportunities available to female athletes, reflecting broader societal changes towards gender equality.\n\n\n\n\n\n\n\n\nFigure 1: Growth in the percentage of female athletes participating in the Summer Olympics from 1900 to 2016.\n\n\n\n\n\nAs the decades rolled on, particularly after World War II, the momentum for women’s rights gained ground, and so did female participation in sports. The 1970s marked a significant turning point, driven by global movements for gender equality and legislative changes such as Title IX in the United States (“Title IX and Sex Discrimination” 1972). Title IX, enacted in 1972, protects individuals from discrimination based on sex in education programs or activities receiving federal financial assistance. While not directly focused on sports, Title IX played a crucial role in expanding opportunities for women in athletics by requiring educational institutions to provide equal access to sports programs. By 2016, women were not just participating. They were competing in almost every sport, standing shoulder to shoulder with men as equals.\nFigure 2 further illustrates this shift, highlighting the growth in the number of sports available to women over the years. What began as a handful of “suitable” sports gradually expanded into a diverse array of events, including those traditionally dominated by men, such as boxing and wrestling. This wasn’t just about adding more sports. It was about challenging deep-rooted perceptions of what women could achieve.\n\n\n\n\n\n\n\n\nFigure 2: The growth of women’s sports compared to total sports in the Summer Olympics (1900-2016)."
+  },
+  {
+    "objectID": "posts/welcome/index.html#looking-ahead",
+    "href": "posts/welcome/index.html#looking-ahead",
+    "title": "Breaking barriers: The evolution of female participation in the Olympics",
+    "section": "Looking ahead",
+    "text": "Looking ahead\nThe transformation of female participation in the Summer Olympics from 1900 to 2016 is a powerful narrative of progress, but it also serves as a reminder of the work that remains. While women now compete in nearly all Olympic sports, the fight for true equality, both in terms of opportunities and recognition, is ongoing.\nAs we look to future Olympic Games, it’s essential to continue advocating for policies that support female athletes and to celebrate their achievements on equal footing with their male counterparts. The Olympic Games, after all, are more than just a series of competitions. They are a reflection of our global society and its values. The strides made in gender equality within the Games mirror broader social progress, yet they also highlight the areas where we still fall short.\nThe story of women in the Olympics is not just one of athletic achievement. It is a story of resilience, determination, and the ongoing pursuit of equality. It’s a story that continues to unfold, with each Olympic Games offering a new chapter in the long journey toward true gender parity."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploring data and insights",
+    "section": "",
+    "text": "Breaking barriers: The evolution of female participation in the Olympics\n\n\n\n\n\n\nsports\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nBilguun Boldbaatar\n\n\n\n\n\n\nNo matching items"
+  }
+]
